@@ -2,7 +2,7 @@
 
 ## The Demon of JavaScript
 
-<img src="./the-devil-evil-laugh.gif"></img>
+<img src="./images/the-devil-evil-laugh.gif"></img>
 
 ## SWBATS
 
