@@ -32,6 +32,9 @@ const container = document.getElementsByTagName("main")[0];
 const card = document.getElementsByTagName("section")[0];
 const text = document.getElementsByTagName("p")[0];
 
+// Verify the content of text:
+console.log("Card text: ", text.innerText);
+
 const changeText = function (event) {
   /*
   This function will change the text 
