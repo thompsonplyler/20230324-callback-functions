@@ -1,6 +1,15 @@
 @import "https://unpkg.com/open-props";
 @import "https://unpkg.com/open-props/normalize.min.css";
 
+/*
+This stylesheet uses a lot of CSS custom properties! 
+Here's an MDN article about CSS custom properties:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+
+The line at the top imports the Open Props CSS file, which loads in 
+a suite of different CSS custom properties we use below as variables. 
+*/
+
 main {
   display: flex;
   align-items: center;
@@ -11,6 +20,7 @@ main {
 
 section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--orange-6);
@@ -23,6 +33,7 @@ section {
 }
 
 section:hover {
+
   animation-name: card-hover;
   animation-duration: 0.75s
 }
@@ -51,4 +62,12 @@ p {
     transform: scale(1);
     background-color: var(--orange-6);
   }
+}
+
+button {
+  margin: 1rem;
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-5);
+  background-color: var(--yellow-3);
+  border-color: var(--orange-3)
 }
