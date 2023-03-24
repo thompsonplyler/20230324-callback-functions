@@ -1,56 +1,48 @@
 console.log("I am connected!");
 
-const container = document.getElementById("container");
-const text = document.querySelector(".card-text");
-
-const doAThing = function (event) {
-  // definition of a function
-  console.log(event);
-  text.innerText = "something";
-  console.log("Mountain is totally unironically delicious!");
-  return "New Dew! (Limited Time Only)";
-};
-
-container.addEventListener("click", doAThing);
-
-function myAddEventListener(string, callback, event) {
-  if (event.type === string) {
-    callback(event);
-  }
-}
-
-// callback examples using arrays with forEach
-/*
-
-
-animals.forEach(shoutOut);
-animals.forEach((animal) => console.log(animal));
-
-multiple automatic arguments: 
-
-
-function add(num1) {
-  return num1;
-}
-
-function calculate(mathThing, num1, num2) {
-    return mathThing(num1, num2);
-}
-
-const result = calculate(add, 2, 3);
-console.log(result);
+/* 
+EXAMPLE 1: Callback functions illustrated with
+.forEach()
 */
 
-const animals = ["dog", "cat", "bird", "fish", "snake", "lizard", "horse"];
+let avengers = [
+  "Captain America",
+  "Iron Man",
+  "Black Widow",
+  "Hulk",
+  "Thor",
+  "Hawkeye",
+];
 
-function myForEach(array, myCallback) {
-  for (let i = 0; i < array.length; i++) {
-    myCallback(array[i], i, array);
-  }
+// What is the difference between the two forEach examples?
+
+avengers.forEach((avenger) => console.log(`Greetings, ${avenger}!`));
+
+function shoutOut(avenger) {
+  console.log(`Greetings, ${avenger}!`);
 }
+avengers.forEach(shoutOut);
 
-const shoutOut = function (animal) {
-  console.log(`Animal: ${animal}.`);
+/*
+EXAMPLE 2: Callback functions illustrated with
+.addEventListener()
+*/
+
+const container = document.getElementsByTagName("main")[0];
+const card = document.getElementsByTagName("section")[0];
+const text = document.getElementsByTagName("p")[0];
+
+const changeText = function (event) {
+  /*
+  This function will change the text 
+  of the card
+  */
+
+  return "Some text";
 };
 
-myForEach(animals, shoutOut);
+container.addEventListener("click", function () {
+  /* do the thing 
+   in this anonymous function
+   */
+});
